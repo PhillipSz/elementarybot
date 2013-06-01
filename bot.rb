@@ -169,7 +169,7 @@ bot = Cinch::Bot.new do
   end
 
   on :message, /^!help/ do |m, query|
-    m.reply "#{m.user.nick}: I know these Commands: !google <searchterm>, !lp <name>, !bug <number>, !seen <nick>, !hello, !memo <nick> <message>, !chuck, !love <nick>, !randomadvice, !advice <term>, !weatherc <city,land>, !weatherf <city,land>"
+    m.reply "#{m.user.nick}: I know these Commands: !google <searchterm>, !lp <name>, !bug <number>, !seen <nick>, !hello, !memo <nick> <message>, !chuck, !love <nick>, !randomadvice, !advice <term>, !weatherc <city,land>, !weatherf <city,land>, !ot <name>"
   end
 
   on :message, /^!hello/ do |m, query|
@@ -180,7 +180,7 @@ bot = Cinch::Bot.new do
     m.reply "#{nick}: You got a thousand kisses from #{m.user.nick} "
   end
 
-  on :message, /^!op (.+)/ do |m, nick|
+  on :message, /^!ot (.+)/ do |m, nick|
     m.reply "#{nick}: You are talking about offtopic stuff! please join #elementary-offtopic"
   end
 end
